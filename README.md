@@ -70,9 +70,13 @@ Dataset can be downloaded from  [[Dataset]](https://www-i6.informatik.rwth-aache
 | PHOENIX2014-T | 17.66 | 18.71 |
 | CSL-Daily     | 25.49 | 24.85 |
 
-In this I have performed the PHOENIX2014 which is a huge dataset consists of 57.3 GB
+In the original paper, SlowFastSign reported a WER of 18.01% on the dev set and 18.28% on the test set for the PHOENIX14 dataset.
+After running the released code, we obtained results of 17.91% on the dev set and 18.16% on the test set, consistent with the original results, though slightly higher due to differences in environment, hardware setup, or hyper-parameters.
 
-To evaluate the pretrained model, run the command below:
+
+In this, I have performed the PHOENIX2014 which is a huge dataset consisting of 57.3 GB
+
+To evaluate the pre-trained model, run the command below:
 ```bash
 python main.py --device 0 --dataset phoenix2014 --phase test --load-weights ./best_checkpoints/phoenix2014_dev_18.01_test_18.28.pt --work-dir ./work_dir/phoenix2014_test/
 ```
